@@ -2,7 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
+}
+
+:root{
+    --Primary-Color: #ef4136;
+    --Secondary-Color : #d0c3be;
+    --Tertiary-Color: #6e6c6c;
 }
 
 @font-face {
@@ -19,6 +25,7 @@
     font-family: myfont3;
     src: url(./fonts/Bittermilk.ttf);
 }
+
 
 .wrapper{
     height: 100vh;
@@ -40,34 +47,40 @@
 }
 
 .navbar{
-    #logo{
-        height: 10%;
-        width: 10%;
-    }
     padding: 20px 50px;
     display: flex;
     top: 0;
     position: absolute;
-    justify-content: space-between;
-    ul{
-        list-style: none;
-        display: flex;   
-    }
-    li{
-        margin-left:100px;
-        a{
-            text-decoration: none;
-            color: white;
-            font-weight: 800;
+    justify-content: space-between;  
+    background: transparent;
+    backdrop-filter: blur(10px);
+        #logo{
+            height: 10%;
+            width: 10%;
         }
-    }
-    button{
-        color: white;
-        background-color: #ef4136;
-        padding: 10px 50px;
-        border-radius: 40px;
-    }
-    li:hover{a{color: #ef4136;}}
+    
+         ul{
+            list-style: none;
+            display: flex;   
+        }
+        li{
+            margin-left:100px;
+            a{
+                text-decoration: none;
+                color: white;
+                font-weight: 800;
+            }
+        }
+        button{
+            color: white;
+            background-color: var(--Primary-Color);
+            padding: 10px 50px;
+            border-radius: 40px;
+        }
+        li:hover{a{color: var(--Primary-Color);}}
+        #phone_menu{
+            display: none;
+        }
 }
 
 .main{
@@ -86,32 +99,44 @@
             font-family: myfont2;
             font-size: 15em;
             margin-top: -30px;
-            color: #ef4136; 
+            color: var(--Primary-Color); 
         }
         h3{
             font-size: 4em;
             margin-top: -30px;
-            color: #d0c3be;
+            color: var(--Secondary-Color);
         }
         #left_btn{
             margin-top: 5%;
             #btn1{
                 padding: 10px 70px;
                 border-radius: 40px;
-                background-color: #ef4136;
+                background-color: var(--Primary-Color);
                 font-size: 3em;
                 color: white;
             }
+            
             #btn2{
                 margin-left: 20%;
                 padding: 10px 70px;
                 border-radius: 40px;
-                color: #ef4136; 
+                color: var(--Primary-Color); 
                 background-color: transparent;
-                border: 5px solid #ef4136;
+                border: 5px solid var(--Primary-Color);
                 font-size: 3em;
             }
+
+            #btn1:hover{
+                background-color: red;
+                color:black;
+            }
+    
+            #btn2:hover{
+                background-color: var(--Primary-Color);
+                color: white;
+            }
         }
+        
     }
         .right{
             width: 50vw;
@@ -122,6 +147,8 @@
             }
         }
     }
+
+
 
 .section2{
     .top_menu{
@@ -137,7 +164,7 @@
         font-size: 5em;
         font-family: myfont3;
         red{
-            color: #ef4136;
+            color: var(--Primary-Color);
         }
     }
     .menu{
@@ -160,7 +187,7 @@
             #desc{
                 margin: 5% 0 0 5%;
                 font-size: 2em;
-                color: #d0c3be
+                color: var(--Secondary-Color);
             }
             .price{
                 display: flex;
@@ -168,16 +195,16 @@
                 #price{
                     margin: 5% 0 0 8%;
                     font-size: 3.5em;
-                    color: #ef4136;
+                    color: var(--Primary-Color);
                 }
                 button{
                     margin: 5% 10% 0 0;
-                    background-color: #ef4136;
+                    background-color: var(--Primary-Color);
                     padding: 8px 50px;
                     border-radius: 40px;
                     color: white;
                     font-size: 2em;
-                    border: #ef4136;
+                    border: var(--Primary-Color);
                 }
             }   
             }
@@ -198,7 +225,7 @@
     
 }
 
-section3{
+.section3{
     .special_offer{
         height: 100vh;
         width: 100vw;
@@ -218,20 +245,20 @@ section3{
             margin: 10% 0 5% 0;
         }
         h1{
-            color: #ef4136;
+            color: var(--Primary-Color);
             font-family: myfont3;
             font-size: 10em;
             text-align: center;
         }
         h3{
             font-family: sans-serif;
-            color: #d0c3be;
+            color: var(--Secondary-Color);
             font-size: 2.8em;
             text-align: justify;
             margin: 2% 0 10% 5.7em;
         }
         .price{
-            color: #ef4136;
+            color: var(--Primary-Color);
             display: flex;
             position: relative;
             h1{
@@ -242,7 +269,7 @@ section3{
             #dollar{
                 font-family: myfont3;
                 font-size: 10em;
-                color: #ef4136;
+                color: var(--Primary-Color);
                 margin: -4% 0 0 15%; 
             }
         }
@@ -251,7 +278,7 @@ section3{
             position: absolute;
             color: white;
             font-size: 3em;
-            background-color: #ef4136;
+            background-color: var(--Primary-Color);
             border-radius: 40px;
             padding: 10px 50px;
             right: 15%;
@@ -276,11 +303,11 @@ section3{
     }
 }
 
-section4{
+.section4{
     .ourmenu{
         height: 160vh;
         width: 90vw;
-        background-color: rgb(255, 255, 255);
+        background-color: white;
         margin: 5%;
         }
     .title{
@@ -294,7 +321,7 @@ section4{
             font-family: sans-serif;
         }
         red{
-            color: #ef4136;
+            color: var(--Primary-Color);
         }
     }
     .menu{
@@ -316,7 +343,7 @@ section4{
             #desc{
                 margin: 5% 0 0 5%;
                 font-size: 2em;
-                color: #d0c3be
+                color: var(--Secondary-Color);
             }
             .price{
                 display: flex;
@@ -324,16 +351,16 @@ section4{
                 #price{
                     margin: 5% 0 0 8%;
                     font-size: 3.5em;
-                    color: #ef4136;
+                    color: var(--Primary-Color);
                 }
                 button{
                     margin: 5% 10% 0 0;
-                    background-color: #ef4136;
+                    background-color: var(--Primary-Color);
                     padding: 8px 50px;
                     border-radius: 40px;
                     color: white;
                     font-size: 2em;
-                    border: #ef4136;
+                    border: var(--Primary-Color);
                     }
                 }
             }
@@ -348,11 +375,11 @@ section4{
             margin: 2% 0 0 46%;
             padding: 10px 50px;
             border-radius: 40px;
-            background-color: #ef4136;
+            background-color: var(--Primary-Color);
             color: white;
             font-family: sans-serif;
             font-size: 2em;
-            border: #ef4136;
+            border: var(--Primary-Color);
         }
         #scroll{
             height: 5%;
@@ -361,7 +388,7 @@ section4{
         }
 }
 
-section5{
+.section5{
 
     .services{
         height: 100vh;
@@ -378,7 +405,7 @@ section5{
         font-size: 5em;
         color: white;
         red{
-            color: #ef4136;
+            color: var(--Primary-Color);
         }
     }
 
@@ -399,7 +426,7 @@ section5{
                 }
                 h1{
                     margin: 10% 0 5% 0;
-                    color: #ef4136;
+                    color: var(--Primary-Color);
                 }
             }
 
@@ -408,7 +435,7 @@ section5{
             }
             .service2{
                 margin:0 5% ;
-                background: #ef4136;
+                background: var(--Primary-Color);
                 width: 40%;
                 height: 35%;
                 border-radius: 50px;
@@ -466,7 +493,7 @@ section5{
             font-size: 7em;
         }
         red{
-            color: #ef4136;
+            color: var(--Primary-Color);
         }
         h3{
             font-size: 3em;
@@ -475,9 +502,9 @@ section5{
         button{
             font-size: 2em;
             padding: 20px 70px;
-            background-color: #ef4136;
+            background-color: var(--Primary-Color);
             color: white;
-            border: #ef4136;
+            border: var(--Primary-Color);
             border-radius: 50px;
         }
 
@@ -487,7 +514,6 @@ section5{
 .section7{
     .contact{
         background-image: url(./assets/whitebg.png);
-        /* background-size: cover; */
         background-position: bottom;
         background-repeat: no-repeat;
         width: 96vw;
@@ -504,7 +530,7 @@ section5{
                 font-family: sans-serif;
             }
             red{
-                color: #ef4136;
+                color: var(--Primary-Color);
             }
         }
     }
@@ -526,7 +552,7 @@ section5{
                 font-size: 4.1em;
                 font-weight: 100;
             }
-            red{color:#ef4136;}
+            red{color:var(--Primary-Color);}
         }
         .right{
             height: 70vh;
@@ -559,10 +585,10 @@ section5{
                 margin: 10% 0 0 2%;
                 padding: 10px 70px;
                 border-radius: 40px;
-                background-color: #ef4136;
+                background-color: var(--Primary-Color);
                 color: white;
                 font-size: 2.5em;
-                border: #ef4136;
+                border: var(--Primary-Color);
             }
         }
     }
@@ -598,7 +624,7 @@ section5{
         width: 47vw;
         bottom: 18%;
         left: 52%;
-        color: rgb(255, 255, 255);
+        color: white;
         display: flex;
         ul{
             margin-right: 10em;
@@ -610,7 +636,7 @@ section5{
         }
         red{
             font-weight: 700;
-            color: #ef4136;
+            color: var(--Primary-Color);
         }
 
     }
@@ -630,7 +656,7 @@ section5{
         #copyright{
             margin: 0 0 0 37em;
         }
-        red{color:#ef4136;}
+        red{color:var(--Primary-Color);}
     }
     
 }
@@ -659,7 +685,7 @@ section5{
     position: absolute;
     bottom: 15rem;
     font-size: 1rem;
-    color: #6e6c6c;
+    color: var(--Tertiary-Color);
 }
 .Errorpage a{
     position: absolute;
@@ -683,7 +709,7 @@ section5{
         position: absolute;
         bottom: 15rem;
         font-size: 2rem;
-        color: #6e6c6c;
+        color: var(--Tertiary-Color);
     }
     .Errorpage a{
         position: absolute;
@@ -697,3 +723,536 @@ section5{
     }
 }
                 
+
+@media screen and (max-width: 600px) {    
+    .wrapper{
+        height: 100vh;
+        width: 100vw;
+        background-image: url(./assets/bg1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .curve{
+        height: 100vh;
+        width: 100vw;
+        background-image: url(./assets/bg1.1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .navbar{
+        padding: 10px 20px;
+        justify-content: space-between;
+        background: transparent;
+        backdrop-filter: blur(10px);
+
+        #logo{
+            width: 30%;
+        }
+
+        
+        ul{
+            display: none;
+        }
+        button{
+            display: none;
+        }
+        #phone_menu{
+            text-decoration: none;
+            color: white;
+            display: flex;
+        }
+    }
+    
+    .main{
+        flex-direction: column;
+        top: 10%;
+        .left{
+            width: 95vw;
+            #Are{
+                font-size: 3em;
+            }
+            h1{
+                font-size: 4.5em;
+                margin-top: -10px;
+            }
+            h3{
+                font-size: 1.2em;
+                margin-top: -10px;
+            }
+            #left_btn{
+                margin-top: 5%;
+                #btn1{
+                    padding: 2% 7%;
+                    font-size: 1em;
+                }
+                
+                #btn2{
+                    border-width: 2px;
+                    margin-left: 10%;
+                    padding: 2% 7%;
+                    font-size: 1em;
+                }
+    
+                #btn1:hover{
+                    background-color: red;
+                    color:black;
+                }
+        
+                #btn2:hover{
+                    background-color: var(--Primary-Color);
+                    color: white;
+                }
+            }
+            
+        }
+            .right{
+                width: 100vw;
+                img{
+                    position: absolute;
+                    left: 0;
+                    height: 23rem;
+                    margin: 20% 0 0 0;
+                }
+            }
+        }
+    
+    
+    
+    .section2{
+        .top_menu{
+            background-image: url(./assets/whitebg.png);
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            height: 200vh;
+            width: screen;
+            margin: 5%;
+            }
+        #title{
+            font-size: 2em;
+            margin: 0% 25%;
+        }
+        .menu{
+            margin-top: 5%;
+            display:flex;
+            flex-direction: column;
+            .food{
+                height: 28em;
+                width: 100%;
+                img{
+                    height: 16.2em;
+                }
+                #name{
+                    margin: 2% 0 0 5%;
+                    font-size: 2em;
+                }
+                #desc{
+                    margin: 5% 0 0 5%;
+                    font-size: 1.2em;
+                }
+                .price{
+                    #price{
+                        font-size: 2em;
+                    }
+                    button{
+                        padding: 2px 25px;
+                        font-size: 1em;
+                    }
+                }   
+                }
+                #food2{
+                    margin: 5em 0 0 0;
+                    img{
+                        width: 22em;
+                    }
+                }
+    
+                #food3{
+                    margin: 5em 0 0 0;
+                    img{
+                        width: 22em;
+                    }
+                }
+        }
+        
+    }
+    
+    .section3{
+        .special_offer{
+            height: 90vh;
+            width: 100vw;
+            background-image: url(./assets/bg1.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+        }
+        .left{
+            width: 100vw;
+            h2{
+                font-size: 1.8em;
+                text-align: center;
+                margin: 10% 0 0% 0;
+            }
+            h1{
+                font-size: 3em;
+                text-align: center;
+            }
+            h3{
+                font-size: 0.85em;
+                text-align: center;
+                margin: 2% 0 0 0;
+            }
+            .price{
+                display: flex;
+                margin-top: 15%;
+                h1{
+                    font-size: 4rem;
+                }
+                #dollar{
+                    font-size: 2em;
+                    margin: -4% 0 0 15%; 
+                }
+            }
+            
+            button{
+                font-size: 1em;
+                padding: 2px 20px;
+                right: 7%;
+                margin-top: 7%;
+            }
+        }
+    
+        .right{
+            width: 100vw;
+            position: relative;
+            #plate{
+                position: absolute;
+                height: 20vh;
+                top: 20%;
+                margin-top: 50%;
+            }
+            #burger{
+                width: 24.5em;
+                
+            }
+        }
+    }
+    
+    .section4{
+        .ourmenu{
+            height: 380vh;
+            width: 90vw;
+            }   
+        .title{
+            h2{
+                font-size: 2.5em;
+            }
+            h3{
+                font-size: 0.9em;
+            }
+        }
+        .menu{
+            display:flex;
+            flex-direction: column;
+            .food{
+                height: 28em;
+                width: 100%;
+                margin: 10% 0 0 0;
+                box-shadow: 0px 0px 30px black;
+                img{
+                    height: 16.2em;
+                    border-radius: 5%;
+                }
+                #name{
+                    margin: 2% 0 0 5%;
+                    font-size: 2em;
+                }
+                #desc{
+                    margin: 5% 0 0 5%;
+                    font-size: 1.1em;
+                    color: var(--Secondary-Color);
+                }
+                .price{
+                    #price{
+                        font-size: 2em;
+                    }
+                    button{
+                        padding: 2px 25px;
+                        font-size: 1em;
+                        }
+                    }
+                }
+    
+                #food1, #food2, #food3{
+                    img{
+                        width: 22em;
+                    }
+                }
+            }
+            #more{
+                margin: 20% 0 0 35%;
+                padding: 3px 25px;
+                font-size: 1em;
+            }
+            #scroll{
+                height: 2%;
+                width: 7%;
+                margin: 2% 0 0 50%;
+            }
+    }
+    
+    .section5{
+        
+        .services{
+            height: 170vh;
+            width: 100vw;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(./assets/bg1.png);
+            padding: 5%;
+        }
+        #title{
+            text-align: center;
+            font-family: myfont3;
+            font-size: 2.5em;
+            color: white;
+            red{
+                color: var(--Primary-Color);
+            }
+        }
+    
+        .service{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .left{
+                margin-top: 90%;
+                width: 100%;
+                .service1{
+                    margin:5% 0% ;
+                    width: 100%;
+                    height: 30%;
+                    padding:5% 10%;
+                    img{
+                        width: 3em;
+                        height: 4em;
+                    }
+                    h1{
+                        font-size: 1.2em;
+                    }
+                    h2{
+                        font-size: 1em;
+                    }
+                }
+    
+                #img2{
+                    width: 6em;
+                    height: 3em;
+                }
+                .service2{
+                    margin:5% 0% ;
+                    background: var(--Primary-Color);
+                    width: 100%;
+                    height: 35%;
+                    padding:5% 10%;
+                    color: white;
+                    img{
+                        width: 5em;
+                        height: 4em;
+                    }
+                    h1{
+                        font-size: 1.2em;
+                    }
+                    h2{
+                        font-size: 1em;
+                    }
+                }
+                .left_top, .left_bottom{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 5% 2% 5% 2%;
+                    display: flex;
+                }
+            }
+            .right{
+                padding: 0 20%;
+                #boy2{
+                    position: absolute;
+                    top: 0;
+                    width: 15em;
+                    margin: 2% 0 0 0%;
+                    
+                }
+            }
+    
+        }
+    }
+    
+    .section6{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        .left{
+            position: absolute;
+            margin: 80% 0 0 0;
+            .aboutimg{
+                height: 40vh;
+                width: 90vw;
+                margin: 5%;
+                border-radius: 40px;
+            }
+            img{
+                height: 35vh;
+                width: 80vw;
+                margin: 5%;
+                border-radius: 40px;
+            }
+        }
+        .right{
+            margin: 0% 5%;
+            justify-items: center;
+            h1{
+                font-size: 2.5em;
+            }
+            h3{
+                font-size: 0.9em;
+            }
+            button{
+                font-size: 1em;
+                padding: 2px 25px;
+                margin-top: 22em;
+            }
+        }
+    }
+    
+    .section7{
+        .contact{
+            height: 90vh;
+            width: 100vw;
+            padding: 0%;
+            margin: 0%;
+            .title{
+                text-align: center;
+                h2{
+                    font-size: 2.5em;
+                }
+                h3{
+                    font-size: 1em;
+                }
+            }
+        }
+        
+        .content{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 100vw;
+            .left{
+                height: 50vh;
+                width: 100vw;
+                h1{
+                    font-size: 5em;
+                }
+                h3{
+                    margin: -7% 0 0 1%;
+                    font-size: 2em;
+                }
+            }
+            .right{
+                padding: 0 2%;
+                margin-top: -10em;
+                height: 40vh;
+                width: 100vw;
+                label{
+                    font-size: 1.5em;
+                }
+                #name{
+                    margin-right:40% ;
+                }
+                #nameInput{
+                    margin-right: 11%;
+                }
+                input{
+                    font-size: 1em;
+                }
+    
+                .message{
+                    margin-top: 5em;
+                    input{
+                        width: 80%;
+                    }
+                }
+                button{
+                    padding: 5px 50px;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+    
+    .footer{
+        background-image: url(./assets/bg1.png);
+        height: 120vh;
+        width: 100vw;
+        .left{
+            top: 0;
+            img{
+                top: 0;
+                height: 4em;
+                margin: 5% 0 0 -8%;
+                
+            }
+            h3{
+                top: 0;
+                font-size: 1.5em;
+                margin: 25% 0 0 -5%;
+            }
+        }
+    
+        .right{
+            position: absolute;
+            width: 100vw;
+            bottom: 20%;
+            left: 0;
+            margin-top: 50em;
+            display: flex;
+            flex-direction: column;
+            ul{
+                margin-right: 0em;
+            }
+            li{
+                font-size: 1.5em;
+                list-style: none;
+                font-weight: 300;
+            }
+    
+        }
+        
+        .bottom{
+            position: absolute;
+            width: 100vw;
+            bottom: 2%;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            li{
+                font-size: 1.5em;
+                list-style: none;
+                margin-right: 10%; 
+            }
+            #copyright{
+                margin: 5% 0 0 0;
+                font-size: 1em;
+            }
+        }
+        
+    }
+  }
